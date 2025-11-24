@@ -16,12 +16,12 @@ LeetMentor is a lightweight browser extension designed to assist users while sol
 
 - HTML, CSS, JavaScript
 - highlight.js (syntax highlighting)
-- Gemini API integration (for explaination, code generation and complexity analysis)
+- Gemini API integration (for explanation, code generation and complexity analysis)
 
 ## Implementation Screenshots
 <img width="1811" height="956" alt="LeetMentor" src="https://github.com/user-attachments/assets/81e5e746-4885-481c-a2d8-c8ecadcdf266" />
 
-<img width="1811" height="958" alt="LM1-Explaination" src="https://github.com/user-attachments/assets/dca26656-f5da-43be-b351-775db6616a9e" />
+<img width="1811" height="958" alt="LM1-Explanation" src="https://github.com/user-attachments/assets/dca26656-f5da-43be-b351-775db6616a9e" />
 
 <img width="1813" height="960" alt="LM2-StepByStepExp" src="https://github.com/user-attachments/assets/7ba60c4c-146c-4eb8-b62f-29ef53fa069d" />
 
