@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LeetMentor",
+  "version": "1.0",
+  "description": "Your AI-powered mentor for solving LeetCode problems step-by-step.",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "host_permissions": ["https://leetcode.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["highlight.min.js", "atom-one-dark.min.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
