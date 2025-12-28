@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LeetMentor</title>
+        <style>
+            /* Hide all scrollbars but keep scroll functionality */
+            ::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+
+            /* Firefox & others */
+            * {
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 10px;
+                padding: 0;
+                width: 350px;
+                background-color: #262626;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: #ebebeb;
+                text-align: center;
+            }
+
+            .btns {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            button {
+                margin: 0 5px 10px 5px;
+                padding: 8px 12px;
+                background-color: #e8961c;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 0.9rem;
+            }
+
+            button:hover {
+                background-color: #cd8110;
+            }
+
+            .output-container {
+                max-height: 300px;
+                overflow-y: auto;
+                border-radius: 6px;
+                background-color: #262626;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .output-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .output-container p {
+                color: #fff;
+                padding: 2px 2px;
+                margin: 0;
+                font-size: 0.8rem;
+            }
+
+            #output-text {
+                margin: 10px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            #output-text::-webkit-scrollbar {
+                display: none;
+            }
+
+            .code-actions {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 8px !important;
+                margin-top: 20px !important;
+            }
+
+            .code-actions button {
+                margin: 0 !important;
+                padding: 6px 12px !important;
+                height: 34px !important;
+                font-size: 14px !important;
+                line-height: 1 !important;
+                border: none !important;
+                border-radius: 6px !important;
+                background-color: #e8961c !important;
+                color: white !important;
+                cursor: pointer !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            .code-actions button:hover {
+                background-color: #cd8110 !important;
+            }
+
+            .step {
+                margin-bottom: 10px;
+            }
+
+            pre code {
+                font-size: 12px;
+                line-height: 1.2;
+                background: #1e1e1e;
+                color: #f8f8f2;
+                display: block;
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            pre code::-webkit-scrollbar {
+                display: none;
+            }
+
+            label {
+                color: #ebebeb;
+                margin: 5px 0;
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+
+            .rich-answer {
+                line-height: 1.6;
+                font-size: 14px;
+                padding: 10px;
+                background-color: #1a1a1a;
+                border-radius: 6px;
+                overflow-y: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .rich-answer::-webkit-scrollbar {
+                display: none;
+            }
+
+            .rich-answer ul {
+                padding-left: 1.2rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .rich-answer li {
+                line-height: 1.5;
+            }
+
+            .rich-answer code {
+                background-color: #1a1a1a;
+                padding: 2px 4px;
+                border-radius: 4px;
+                font-family: monospace;
+            }
+
+            .code-actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 6px;
+            }
+
+            .copy-btn {
+                padding: 8px 12px;
+                background-color: #e8961c;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+            .copy-btn:hover {
+                background-color: #cd8110;
+            }
+
+            .hljs {
+                color: inherit !important;
+                background: #1a1a1a !important;
+                border-radius:8px !important;
+            }
+        </style>
+
+        <link rel="stylesheet" href="atom-one-dark.min.css" />
+    
+    </head>
+    <body>
+        <h2><span id="problem-title">Detecting problem...</span></h2>
+
+        <div class="btns">
+            <button id="explain-btn">Explain</button>
+            <button id="steps-btn">Step-by-Step</button>
+            <button id="code-btn">Code</button>
+        </div>
+
+        <!-- Language selector container, hidden by default -->
+        <div id="language-container" style="display: none; margin-bottom: 10px;">
+            <label for="language">Choose language:</label>
+            <div style="display: flex; gap: 6px;">
+                <select id="language" style="width: 100%; padding: 6px; border-radius: 4px;     margin: 10px 0;">
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python" selected>Python</option>
+                <option value="Python3">Python3</option>
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="TypeScript">TypeScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Swift">Swift</option>
+                <option value="Kotlin">Kotlin</option>
+                <option value="Dart">Dart</option>
+                <option value="Go">Go</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Scala">Scala</option>
+                <option value="Rust">Rust</option>
+                <option value="Racket">Racket</option>
+                <option value="Erlang">Erlang</option>
+                <option value="Elixir">Elixir</option>
+            </select>
+            <button id="generate-code-btn" style="margin-top: 8px;">Generate</button>
+            </div>
+        </div>
+
+        <div id="output" class="output-container">
+            <div id="spinner" style="display: none; text-align: center; margin: 25px;">
+                <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" stroke="#e8961c">
+                    <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(2 2)" stroke-width="3">
+                            <circle stroke-opacity=".2" cx="18" cy="18" r="18"/>
+                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                <animateTransform
+                                attributeName="transform"
+                                type="rotate"
+                                from="0 18 18"
+                                to="360 18 18"
+                                dur="1s"
+                                repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <p id="output-text" style="display: none;"></p>
+        </div>
+
+        <script src="highlight.min.js"></script>
+        <script src="config.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
