@@ -20,15 +20,15 @@ LeetMentor is a lightweight browser extension designed to assist users while sol
 
 ## Implementation Screenshots
 
-<img width="1811" height="956" alt="LeetMentor" src="https://github.com/user-attachments/assets/0d0b77f8-f039-451b-a8cd-2aa2a3be920b" />
+<img width="1811" height="956" alt="LeetMentor" src="https://github.com/user-attachments/assets/0107ee99-3b85-4185-84d0-c571e68df7fc" />
 
-<img width="1811" height="958" alt="LM1-Explanation" src="https://github.com/user-attachments/assets/2b973213-f269-43b9-a182-c9f68fe819ec" />
+<img width="1811" height="958" alt="LM1-Explanation" src="https://github.com/user-attachments/assets/48ed4609-95bd-462e-810a-ed0c3e267247" />
 
-<img width="1813" height="960" alt="LM2-StepByStepExp" src="https://github.com/user-attachments/assets/c45081af-1e66-482a-b5af-5da2633c642f" />
+<img width="1813" height="960" alt="LM2-StepByStepExp" src="https://github.com/user-attachments/assets/bd0d569f-0308-42b1-9572-2a9376d42d1b" />
 
-<img width="1813" height="958" alt="LM3-CodeGeneration" src="https://github.com/user-attachments/assets/c47f7273-2d08-4fc5-be5f-cba35e42226e" />
+<img width="1813" height="958" alt="LM3-CodeGeneration" src="https://github.com/user-attachments/assets/6876887f-0a6a-4f9b-9e4f-45b528566fc2" />
 
-<img width="1809" height="956" alt="LM4-ComplexityAnalysis" src="https://github.com/user-attachments/assets/dc2c4ffa-4e64-4010-923b-5fda374c78d2" />
+<img width="1809" height="956" alt="LM4-ComplexityAnalysis" src="https://github.com/user-attachments/assets/01a82158-18d9-47be-b15a-b67c20d7ec21" />
 
-<img width="1812" height="956" alt="LM5-FinalCode" src="https://github.com/user-attachments/assets/4aeee4b7-27c2-47ee-b9a8-4a0720fdcb3f" />
+<img width="1812" height="956" alt="LM5-FinalCode" src="https://github.com/user-attachments/assets/a2ed575f-3f1e-4352-9447-9bbcd29d19b1" />
 
