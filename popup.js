@@ -202,13 +202,13 @@ function formatResponse(text) {
       return `
         <div class="code-block-wrapper" data-type="code" style="margin-bottom:16px;">
           <div class="code-block" style="border-radius:8px;overflow:hidden;">
-            <pre style="margin:0;padding:10px;"><code class="language-${lang}">${code}</code></pre>
+            <pre style="margin:0;"><code class="language-${lang}">${code}</code></pre>
           </div>
-          <div class="code-actions" style="display:flex;gap:8px;margin-top:8px;">
+          <div class="code-actions">
             <button class="analyze-btn" data-action="analyze">Analyze Complexity</button>
             <button class="copy-btn" data-action="copy">Copy</button>
           </div>
-          <div class="code-analysis-result" style="margin-top:8px;"></div>
+          <div class="code-analysis-result" style="margin:8px 0;"></div>
         </div>
       `;
     }
@@ -223,11 +223,11 @@ function formatResponse(text) {
       const lang = lastUsedLanguage || "plaintext";
       const code = escapeHtml(text);
       return `
-        <div class="code-block-wrapper" data-type="code" style="margin-bottom:16px;">
+        <div class="code-block-wrapper" data-type="code">
           <div class="code-block" style="border-radius:8px;overflow:hidden;">
             <pre style="margin:0;"><code class="language-${lang}">${code}</code></pre>
           </div>
-          <div class="code-actions" style="display:flex;gap:8px;margin-top:8px;">
+          <div class="code-actions">
             <button class="analyze-btn" data-action="analyze">Analyze Complexity</button>
             <button class="copy-btn" data-action="copy">Copy</button>
           </div>
@@ -401,10 +401,8 @@ outputText.addEventListener("click", async (e) => {
       const msg = document.createElement("div");
       msg.className = "copy-msg";
       msg.textContent = "Copied!";
-      msg.style.color = "white";
       msg.style.fontSize = "12px";
       msg.style.textAlign = "center";
-      msg.style.marginTop = "6px";
       wrapper.querySelector(".code-actions").after(msg);
 
       setTimeout(() => msg.remove(), 1500);
@@ -468,7 +466,7 @@ outputText.addEventListener("click", async (e) => {
             "Authorization": `Bearer ${GROQ_API_KEY}`
           },
           body: JSON.stringify({
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-120b",
             messages: [
               { role: "user", content: prompt }
             ],

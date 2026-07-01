@@ -33,6 +33,7 @@
             .btns {
                 display: flex;
                 justify-content: space-between;
+                margin: 6px;
             }
 
             button {
@@ -81,27 +82,21 @@
             }
 
             .code-actions {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                gap: 8px !important;
-                margin-top: 20px !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 15px;
+                padding: 0 2px;
             }
 
             .code-actions button {
-                margin: 0 !important;
-                padding: 6px 12px !important;
-                height: 34px !important;
-                font-size: 14px !important;
-                line-height: 1 !important;
-                border: none !important;
-                border-radius: 6px !important;
-                background-color: #e8961c !important;
-                color: white !important;
-                cursor: pointer !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
+                margin: 6px 0 !important;
+                border-radius: 6px;
+                background-color: #e8961c;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 transition: background-color 0.2s ease-in-out;
             }
 
@@ -169,27 +164,6 @@
                 font-family: monospace;
             }
 
-            .code-actions {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 6px;
-            }
-
-            .copy-btn {
-                padding: 8px 12px;
-                background-color: #e8961c;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 0.9rem;
-                margin: 0;
-            }
-
-            .copy-btn:hover {
-                background-color: #cd8110;
-            }
-
             .hljs {
                 color: inherit !important;
                 background: #1a1a1a !important;
@@ -201,7 +175,7 @@
     
     </head>
     <body>
-        <h2><span id="problem-title">Detecting problem...</span></h2>
+        <h2><div id="problem-title" style="margin: 20px;">Detecting problem...</div></h2>
 
         <div class="btns">
             <button id="explain-btn">Explain</button>
@@ -210,10 +184,10 @@
         </div>
 
         <!-- Language selector container, hidden by default -->
-        <div id="language-container" style="display: none; margin-bottom: 10px;">
+        <div id="language-container" style="display: none; margin: 10px;">
             <label for="language">Choose language:</label>
             <div style="display: flex; gap: 6px;">
-                <select id="language" style="width: 100%; padding: 6px; border-radius: 4px;     margin: 10px 0;">
+                <select id="language" style="width: 100%; padding: 6px; border-radius: 4px; margin: 10px 0;">
                 <option value="C++">C++</option>
                 <option value="Java">Java</option>
                 <option value="Python" selected>Python</option>
